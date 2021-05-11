@@ -1,0 +1,104 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    background-image: url(img/CAPA\ CIDADE\ INVISÍVEL.jpg);
+    background-repeat: no-repeat; /*Impede qeua a imagem fique se repetindo*/
+    background-size: cover; /*Faz a imagem cobrir todo o fundo, esticando*/
+    background-position: right top; /*define o ponto de enfase da imagem, evitando que este seja cortado*/
+    display: flex;
+    flex-direction: column; /* faze o header, main e footer ficarem um acima do outro */
+    
+}
+
+
+header
+{
+    height: 70px;
+    background-color:#000000AA;
+    display: flex; /*ORGANIZA OS OBJETOS DENTRO DELE*/
+    justify-content: space-between; /*ESPALHA OS OBJETOS na direção do flex*/
+    /* padding: 10%; UMA INFO SÓ, VALE PARA TODOS (CIMA, DIREITA, EM BAIXO, ESQUERDA) */
+    /* padding: __ __ dois valores vale 1º cima e baixo 2º direita e esquerda */
+    padding: 0 10%; /* cima, dieiro, baixo, esquerda*/ 
+    /*NÃO USAMOS MARGIN PQ O ESPAÇO FICARIA PARA FORA. PADDING É DENTRO DO PRÓPRIO OBJETO*/
+    align-items: center;
+
+    /* Justify e align só vale se tiver o flex antes */
+}
+
+
+.logo img
+{
+    height: 50px;
+}
+
+
+nav a 
+{
+    color: white;
+    text-decoration: none;
+}
+
+nav ul
+{
+    display: flex;
+    gap: 20px; /* espaçamento entre os objetos TAMBÉM É DO FLEX*/
+}
+
+
+nav ul, li
+{
+    list-style-type: none;
+}
+
+main
+{
+    flex-grow:1;
+    /* e eu colocasse flex-grow:2 no footer, ele teria o dobro do tamanho do main
+    importante para proporcionalidade e tals */
+}
+
+footer
+{
+    height: 30px;
+
+}
+
+
+/* para deixar centralizado direita-esquerda
+margin-left: auto
+margin rigth: auto; */
+
+
+
+/* .conteiner
+{
+    height: 500px;
+}
+
+.caixa
+{
+   float: left;
+   background-color:rgb(191, 154, 226);
+   width: 33.33%;
+   padding: 5%;
+}
+
+.caixa:first-child
+{
+background-color: rgb(130, 195, 197);
+}
+
+.caixa:last-child
+{
+background-color: rgb(130, 195, 197);
+} */
