@@ -9,14 +9,16 @@ body
 {
     width: 100vw;
     height: 100vh;
-    background-color: black;
     background-image: url(img/CAPA\ CIDADE\ INVISÍVEL.jpg);
+    background-color: #00000055; /* colocamos cor meio transparente para misturando com a imagem, deixando-a mais opaca/escura*/
+    background-blend-mode: darken; /* mistura a imagem e a cor do fundo pro escuro*/
     background-repeat: no-repeat; /*Impede qeua a imagem fique se repetindo*/
     background-size: cover; /*Faz a imagem cobrir todo o fundo, esticando*/
     background-position: right top; /*define o ponto de enfase da imagem, evitando que este seja cortado*/
     display: flex;
     flex-direction: column; /* faze o header, main e footer ficarem um acima do outro */
     font-family: 'Karla', sans-serif;
+    color:white;
     
 }
 
@@ -63,24 +65,83 @@ header
     color: red;
 }
 
-/* nav ul, li
-{
-    list-style-type: none;
-} */
 
 main
 {
+    padding:25vh 10vw; /*25 pra cima e pra baixo, 10 direita e esquerda*/
     flex-grow:1;
-    /* e eu colocasse flex-grow:2 no footer, ele teria o dobro do tamanho do main
-    importante para proporcionalidade e tals */
+      /* se eu colocasse flex-grow:2 no footer, ele teria o dobro do tamanho do main
+       importante para proporcionalidade e tals */
+}
+
+main h2
+{
+    font-size: 30px;
+}
+
+main h1
+{
+    font-size: 70px;
+}
+
+main p
+{
+    font-size: 25px;
+    font-weight: 200; /* deixa a fonte fininha, espessura*/
+    max-width: 800px; /*o máximo do tamanho da caixinha é 800, quando for menor, vai quebrando confor*/
+}
+
+main a 
+{
+    display: flex; /* transforma o link numa caxinha. poderia ser block*/
+    width: 200px;  /* largura do quadrado*/
+    height: 50px;  /* altura do quadrado*/
+    background-color: goldenrod;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /* tira o sublinhado e a mudança de cor dos links*/
+    color: white;
+    font-size: 20px;
+    margin-top: 30px; /* separa o botão do textos acima dele*/
+    border-radius: 2px;
+    transition: all .5s; /* determina que ____ (todas) mudança deve acontecer em ___ (1s) tempo*/
+    /* text-shadow: 2px 1px 1px black; (baixo direita espalhamento) */
+}
+
+main a:hover 
+{
+    border:solid 1px goldenrod;
+    background-color: black;
 }
 
 footer
 {
     height: 30px;
-
+    text-align: center;
 }
 
+.borboleta
+{
+    position: absolute; /* Deixa a borboleta livre por todo o pai dele, que é o main */
+    width: 60px; 
+    top: 90vh; /* deixa ela em baixo, longe do top */
+    left: 90vw; /* deixa ela para a direita, longe do esquerda */
+    filter: brightness(10%); /* reduz seu brilho para 10%, deixando-a escura */
+    animation: voar 20s linear infinite;
+}
+
+@keyframes voar 
+{
+    0%
+    {
+        transform: translate(0,0); /* no inicio (0), vai começar onde ela está mesmo (eixo x e y no 0)*/
+    }
+
+    100%
+    {
+        transform: translate(-90vw,-90vh); /* no fim (100), vai estar no topo (eixo x e y no 90)*/
+    }
+}
 
 /* para deixar centralizado direita-esquerda
 margin-left: auto
