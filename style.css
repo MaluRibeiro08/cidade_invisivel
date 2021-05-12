@@ -16,6 +16,7 @@ body
     background-position: right top; /*define o ponto de enfase da imagem, evitando que este seja cortado*/
     display: flex;
     flex-direction: column; /* faze o header, main e footer ficarem um acima do outro */
+    font-family: 'Karla', sans-serif;
     
 }
 
@@ -25,12 +26,12 @@ header
     height: 70px;
     background-color:#000000AA;
     display: flex; /*ORGANIZA OS OBJETOS DENTRO DELE*/
-    justify-content: space-between; /*ESPALHA OS OBJETOS na direção do flex*/
-    /* padding: 10%; UMA INFO SÓ, VALE PARA TODOS (CIMA, DIREITA, EM BAIXO, ESQUERDA) */
-    /* padding: __ __ dois valores vale 1º cima e baixo 2º direita e esquerda */
-    padding: 0 10%; /* cima, dieiro, baixo, esquerda*/ 
-    /*NÃO USAMOS MARGIN PQ O ESPAÇO FICARIA PARA FORA. PADDING É DENTRO DO PRÓPRIO OBJETO*/
-    align-items: center;
+    justify-content: space-between; /*ESPALHA OS OBJETOS na direção do flex dando espaço entre os componentes de header*/
+    padding: 0 10vw; /* cima, dieiro, baixo, esquerda  10% valor anterior aos 10vw
+        /* padding: 10%; UMA INFO SÓ, VALE PARA TODOS (CIMA, DIREITA, EM BAIXO, ESQUERDA) */
+        /* padding: __ __ dois valores vale 1º cima e baixo 2º direita e esquerda */
+        /*NÃO USAMOS MARGIN PQ O ESPAÇO FICARIA PARA FORA. PADDING É DENTRO DO PRÓPRIO OBJETO*/
+    align-items: center; /* centraliza na vertical quando é row, que é o caso do header*/
 
     /* Justify e align só vale se tiver o flex antes */
 }
@@ -38,27 +39,34 @@ header
 
 .logo img
 {
-    height: 50px;
+    width: 120px;
 }
 
-
-nav a 
-{
-    color: white;
-    text-decoration: none;
-}
-
-nav ul
+.links ul
 {
     display: flex;
     gap: 20px; /* espaçamento entre os objetos TAMBÉM É DO FLEX*/
+    list-style-type: none; /* tira as bolinhas da lista, que no caso é o link*/
 }
 
+.links a 
+{
+    color: white;
+    text-decoration: none; /* tira o sublinhado e a mudança de cor dos links*/
+    font-size: 20px;
+    user-select: none; /* dnão deixa o usuário selecionar os links*/
+    transition: all 1s; /* determina que ____ (all) mudança deve acontecer em ___ (1s) tempo*/
+}
 
-nav ul, li
+.links a:hover /* aqui vocês especifica o que acontece ao passar o mouse (hover) pelo elemento (a de links)*/
+{
+    color: red;
+}
+
+/* nav ul, li
 {
     list-style-type: none;
-}
+} */
 
 main
 {
