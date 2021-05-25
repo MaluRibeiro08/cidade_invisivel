@@ -9,10 +9,10 @@ body
     width: 100vw;
     height: 100vh;
     background-image: url(img/CAPA\ CURUPIRA.jpg);
-    background-color: #79737355; /* colocamos cor meio transparente para misturando com a imagem, deixando-a mais alaranjada*/
+    background-color: #c5180160; /* colocamos cor meio transparente para misturando com a imagem, deixando-a mais alaranjada*/
     background-blend-mode:darken; /* mistura a imagem e a cor do fundo pro escuro*/
     background-repeat: no-repeat; /*Impede qeua a imagem fique se repetindo*/
-    background-size: cover; /*Faz a imagem cobrir todo o fundo, esticando*/
+    background-size:cover; /*Faz a imagem cobrir todo o fundo, esticando*/
     background-position: left top; /*define o ponto de enfase da imagem, evitando que este seja cortado*/
     display: flex;
     flex-direction: column; /* faze o header, main e footer ficarem um acima do outro */
@@ -63,7 +63,7 @@ header
 }
 main
 {
-    padding:25vh 10vw; /*25 pra cima e pra baixo, 10 direita e esquerda*/
+    padding:15vh 0vh 0vw 20vh; /*25 pra cima e pra baixo, 10 direita e esquerda*/
     flex-grow:1;
       /* se eu colocasse flex-grow:2 no footer, ele teria o dobro do tamanho do main
        importante para proporcionalidade e tals */
@@ -72,11 +72,12 @@ main
 h1
 {
     font-family: calibri;
-    font-size: 100px;
+    font-size: 130px;
     color: rgba(8, 8, 8, 0);
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: rgb(255, 255, 255);
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+    text-shadow:0.09em 0.09em 0.06em black
 }
 .paragrafo
 {
@@ -100,7 +101,7 @@ main h3
 }
 
 
-.biografia /*meche no textão que fala sobre o curupira*/
+.biografia /*mexe no textão que fala sobre o curupira*/
 {
     font-size: 25px;
     font-style: italic;
@@ -115,7 +116,7 @@ main h3
 
 }
 
-.especifica
+.elencoPersonagem
 {
     font-style: italic;
 }
@@ -135,4 +136,5 @@ footer
     font-style: italic;
     height: 30px;
     text-align: center;
+    align-items: center;
 }
