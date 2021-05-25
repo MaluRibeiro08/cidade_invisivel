@@ -63,7 +63,7 @@ header
 }
 main
 {
-    padding:15vh 0vh 0vw 20vh; /*25 pra cima e pra baixo, 10 direita e esquerda*/
+    padding:15vh 0vh 0vw 20vh; /*20 pra cima, 15 esquerda*/
     flex-grow:1;
       /* se eu colocasse flex-grow:2 no footer, ele teria o dobro do tamanho do main
        importante para proporcionalidade e tals */
@@ -71,14 +71,25 @@ main
 
 h1
 {
+    position: relative;
     font-family: calibri;
     font-size: 130px;
-    color: rgba(8, 8, 8, 0);
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
+    color: transparent;
+    -webkit-text-stroke: 2px white;
     margin-bottom: 35px;
-    text-shadow:0.09em 0.09em 0.06em black
 }
+
+main h1::after /*Criando um pseudo item para conseguir a sombra */
+{
+    content: "Curupira";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    color:transparent; /* deixa vasado*/
+    -webkit-text-stroke: 3px black;
+    z-index: -1; /* põe a sombra atrás do texto principal*/
+}
+
 .paragrafo
 {
     display: flex;
