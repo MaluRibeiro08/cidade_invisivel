@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/CAPA\ TUTU\ INVERTIDA.png);
+    background-color: #c5180160; /* colocamos cor meio transparente para misturando com a imagem, deixando-a mais alaranjada*/
+    background-blend-mode:darken; /* mistura a imagem e a cor do fundo pro escuro*/
+    background-repeat: no-repeat; /*Impede qeua a imagem fique se repetindo*/
+    background-size:cover; /*Faz a imagem cobrir todo o fundo, esticando*/
+    background-position: left top; /*define o ponto de enfase da imagem, evitando que este seja cortado*/
+    display: flex;
+    flex-direction: column; /* faze o header, main e footer ficarem um acima do outro */
+    font-family: 'Karla', sans-serif;
+    color:white;
+    
+}
+
+header
+{
+    height: 70px;
+    background-color:#000000AA;
+    display: flex; /*ORGANIZA OS OBJETOS DENTRO DELE*/
+    justify-content: space-between; /*ESPALHA OS OBJETOS na direção do flex dando espaço entre os componentes de header*/
+    padding: 0 10vw; /* cima, dieiro, baixo, esquerda  10% valor anterior aos 10vw
+        /* padding: 10%; UMA INFO SÓ, VALE PARA TODOS (CIMA, DIREITA, EM BAIXO, ESQUERDA) */
+        /* padding: __ __ dois valores vale 1º cima e baixo 2º direita e esquerda */
+        /*NÃO USAMOS MARGIN PQ O ESPAÇO FICARIA PARA FORA. PADDING É DENTRO DO PRÓPRIO OBJETO*/
+    align-items: center; /* centraliza na vertical quando é row, que é o caso do header*/
+
+    /* Justify e align só vale se tiver o flex antes */
+}
+
+.logo img
+{
+    width: 120px;
+}
+
+.links ul
+{
+    gap: 20px; /* espaçamento entre os objetos TAMBÉM É DO FLEX*/
+    list-style-type: none; /* tira as bolinhas da lista, que no caso é o link*/
+}
+
+.links a 
+{
+    color: white;
+    text-decoration: none; /* tira o sublinhado e a mudança de cor dos links*/
+    font-size: 20px;
+    user-select: none; /* dnão deixa o usuário selecionar os links*/
+    transition: all 1s; /* determina que ____ (all) mudança deve acontecer em ___ (1s) tempo*/
+}
+
+.links a:hover /* aqui vocês especifica o que acontece ao passar o mouse (hover) pelo elemento (a de links)*/
+{
+    color: red;
+}
+main
+{
+    padding:15vh 0vh 0vw 20vh; /*20 pra cima, 15 esquerda*/
+    flex-grow:1;
+      /* se eu colocasse flex-grow:2 no footer, ele teria o dobro do tamanho do main
+       importante para proporcionalidade e tals */
+}
+
+h1
+{
+    position: relative;
+    font-family: calibri;
+    font-size: 130px;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    margin-bottom: 35px;
+}
+
+main h1::after /*Criando um pseudo item para conseguir a sombra */
+{
+    content: "Tutu";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    color:transparent; /* deixa vasado*/
+    -webkit-text-stroke: 3px black;
+    z-index: -1; /* põe a sombra atrás do texto principal*/
+}
+
+.paragrafo
+{
+    display: flex;
+}
+
+main h3
+{
+    transform: rotate(270deg);
+    color: red;
+
+}
+
+
+.geral /*Chama a div geral do MAIN*/
+{
+    display: flex;
+    justify-content: space-between;
+    max-width: 40vw;
+    margin-top: 60px;
+}
+
+
+.biografia /*mexe no textão que fala sobre o curupira*/
+{
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 200; /* deixa a fonte fininha, espessura*/
+    max-width: 35vw; /*o máximo do tamanho da caixinha é 35vw, quando for menor, vai quebrando confor*/
+}
+
+.barra
+{
+    font-size: 40px;
+    color: rgb(218, 37, 5);
+
+}
+
+.elencoPersonagem
+{
+    font-style: italic;
+}
+
+h3
+{
+    font-weight: 300; /* deixa a fonte fininha, espessura*/
+    font-size: 30px;
+}
+h2, h4
+{
+    font-weight: 200; /* deixa a fonte fininha, espessura*/
+}
+
+footer
+{
+    font-style: italic;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+}
