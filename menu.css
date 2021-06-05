@@ -1,0 +1,37 @@
+.submenu
+{
+    margin-top: 1px;
+    display: none;
+    font-size: 18px;
+    position: absolute;
+}
+
+.menu
+{
+    display: flex;
+    gap: 20px; /* espaçamento entre os objetos TAMBÉM É DO FLEX*/
+    list-style-type: none; /* tira as bolinhas da lista, que no caso é o link*/
+}
+
+.menu li:hover > .submenu
+{
+    display: block;
+}
+
+.submenu a
+{
+    width: 150%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    background-color: #000000BB;
+    float: inline-end;
+    position: relative;
+}
+
+.submenu a:hover
+{
+    border-left: 5px solid red;  
+}
+
+    

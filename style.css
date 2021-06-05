@@ -46,10 +46,10 @@ header
 
 .links ul
 {
-    display: flex;
     gap: 20px; /* espaçamento entre os objetos TAMBÉM É DO FLEX*/
     list-style-type: none; /* tira as bolinhas da lista, que no caso é o link*/
 }
+
 
 .links a 
 {
